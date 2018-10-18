@@ -317,6 +317,7 @@ public:
     store (std::shared_ptr<NodeObject> const& object) override
     {
         m_batch.store (object);
+
     }
 
     void

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{62f14dcf-98b0-4ac4-b9cb-7805e51c7edc}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>RippleVSBridge</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>.\Impl;.\;C:\Tarball\boost\1_67_0;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include;E:\Projetos\git\rippled-fork-node1111\rippled\src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ripple\app\main\Application.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\BasicApp.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\CollectorManager.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\DBInit.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\LoadManager.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\Main.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\NodeIdentity.cpp" />
+    <ClCompile Include="..\src\ripple\app\main\NodeStoreScheduler.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\Config.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\DatabaseCon.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\Job.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\JobQueue.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\LoadEvent.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\LoadMonitor.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\SNTPClock.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\SociDB.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\Stoppable.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\TerminateHandler.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\TimeKeeper.cpp" />
+    <ClCompile Include="..\src\ripple\core\impl\Workers.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\ApplyStateTable.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\ApplyView.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\ApplyViewBase.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\ApplyViewImpl.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\BookDirs.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\CachedSLEs.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\CachedView.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\CashDiff.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\Directory.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\OpenView.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\PaymentSandbox.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\RawStateTable.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\ReadView.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\TxMeta.cpp" />
+    <ClCompile Include="..\src\ripple\ledger\impl\View.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\backend\MemoryFactory.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\backend\NuDBFactory.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\backend\NullFactory.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\backend\RocksDBFactory.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\backend\RocksDBQuickFactory.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\BatchWriter.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\Database.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\DatabaseNodeImp.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\DatabaseRotatingImp.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\DatabaseShardImp.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\DecodedBlob.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\DummyScheduler.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\EncodedBlob.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\ManagerImp.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\NodeObject.cpp" />
+    <ClCompile Include="..\src\ripple\nodestore\impl\Shard.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\AccountID.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Book.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\BuildInfo.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\digest.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\ErrorCodes.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Feature.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\HashPrefix.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Indexes.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\InnerObjectFormats.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\IOUAmount.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Issue.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Keylet.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\LedgerFormats.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\PublicKey.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Quality.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Rate2.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\SecretKey.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Seed.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Serializer.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\SField.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\Sign.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\SOTemplate.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STAccount.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STAmount.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STArray.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STBase.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STBlob.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STInteger.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STLedgerEntry.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STObject.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STParsedJSON.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STPathSet.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STTx.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STValidation.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STVar.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\STVector256.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\TER.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\tokens.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\TxFormats.cpp" />
+    <ClCompile Include="..\src\ripple\protocol\impl\UintTypes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ripple\app\main\Application.h" />
+    <ClInclude Include="..\src\ripple\app\main\BasicApp.h" />
+    <ClInclude Include="..\src\ripple\app\main\CollectorManager.h" />
+    <ClInclude Include="..\src\ripple\app\main\DBInit.h" />
+    <ClInclude Include="..\src\ripple\app\main\LoadManager.h" />
+    <ClInclude Include="..\src\ripple\app\main\NodeIdentity.h" />
+    <ClInclude Include="..\src\ripple\app\main\NodeStoreScheduler.h" />
+    <ClInclude Include="..\src\ripple\app\main\Tuning.h" />
+    <ClInclude Include="..\src\ripple\core\ClosureCounter.h" />
+    <ClInclude Include="..\src\ripple\core\Config.h" />
+    <ClInclude Include="..\src\ripple\core\ConfigSections.h" />
+    <ClInclude Include="..\src\ripple\core\Coro.ipp" />
+    <ClInclude Include="..\src\ripple\core\DatabaseCon.h" />
+    <ClInclude Include="..\src\ripple\core\impl\semaphore.h" />
+    <ClInclude Include="..\src\ripple\core\impl\SNTPClock.h" />
+    <ClInclude Include="..\src\ripple\core\impl\Workers.h" />
+    <ClInclude Include="..\src\ripple\core\Job.h" />
+    <ClInclude Include="..\src\ripple\core\JobQueue.h" />
+    <ClInclude Include="..\src\ripple\core\JobTypeData.h" />
+    <ClInclude Include="..\src\ripple\core\JobTypeInfo.h" />
+    <ClInclude Include="..\src\ripple\core\JobTypes.h" />
+    <ClInclude Include="..\src\ripple\core\LoadEvent.h" />
+    <ClInclude Include="..\src\ripple\core\LoadMonitor.h" />
+    <ClInclude Include="..\src\ripple\core\SociDB.h" />
+    <ClInclude Include="..\src\ripple\core\Stoppable.h" />
+    <ClInclude Include="..\src\ripple\core\TerminateHandler.h" />
+    <ClInclude Include="..\src\ripple\core\TimeKeeper.h" />
+    <ClInclude Include="..\src\ripple\ledger\ApplyView.h" />
+    <ClInclude Include="..\src\ripple\ledger\ApplyViewImpl.h" />
+    <ClInclude Include="..\src\ripple\ledger\BookDirs.h" />
+    <ClInclude Include="..\src\ripple\ledger\CachedSLEs.h" />
+    <ClInclude Include="..\src\ripple\ledger\CachedView.h" />
+    <ClInclude Include="..\src\ripple\ledger\CashDiff.h" />
+    <ClInclude Include="..\src\ripple\ledger\detail\ApplyStateTable.h" />
+    <ClInclude Include="..\src\ripple\ledger\detail\ApplyViewBase.h" />
+    <ClInclude Include="..\src\ripple\ledger\detail\RawStateTable.h" />
+    <ClInclude Include="..\src\ripple\ledger\detail\ReadViewFwdRange.h" />
+    <ClInclude Include="..\src\ripple\ledger\detail\ReadViewFwdRange.ipp" />
+    <ClInclude Include="..\src\ripple\ledger\Directory.h" />
+    <ClInclude Include="..\src\ripple\ledger\OpenView.h" />
+    <ClInclude Include="..\src\ripple\ledger\PaymentSandbox.h" />
+    <ClInclude Include="..\src\ripple\ledger\RawView.h" />
+    <ClInclude Include="..\src\ripple\ledger\ReadView.h" />
+    <ClInclude Include="..\src\ripple\ledger\Sandbox.h" />
+    <ClInclude Include="..\src\ripple\ledger\TxMeta.h" />
+    <ClInclude Include="..\src\ripple\ledger\View.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Backend.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Database.h" />
+    <ClInclude Include="..\src\ripple\nodestore\DatabaseRotating.h" />
+    <ClInclude Include="..\src\ripple\nodestore\DatabaseShard.h" />
+    <ClInclude Include="..\src\ripple\nodestore\DummyScheduler.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Factory.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\BatchWriter.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\codec.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\DatabaseNodeImp.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\DatabaseRotatingImp.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\DatabaseShardImp.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\DecodedBlob.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\EncodedBlob.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\ManagerImp.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\Shard.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\Tuning.h" />
+    <ClInclude Include="..\src\ripple\nodestore\impl\varint.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Manager.h" />
+    <ClInclude Include="..\src\ripple\nodestore\NodeObject.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Scheduler.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Task.h" />
+    <ClInclude Include="..\src\ripple\nodestore\Types.h" />
+    <ClInclude Include="..\src\ripple\nodestore\VisitCallback.h" />
+    <ClInclude Include="..\src\ripple\protocol\AccountID.h" />
+    <ClInclude Include="..\src\ripple\protocol\AmountConversions.h" />
+    <ClInclude Include="..\src\ripple\protocol\Book.h" />
+    <ClInclude Include="..\src\ripple\protocol\BuildInfo.h" />
+    <ClInclude Include="..\src\ripple\protocol\digest.h" />
+    <ClInclude Include="..\src\ripple\protocol\ErrorCodes.h" />
+    <ClInclude Include="..\src\ripple\protocol\Feature.h" />
+    <ClInclude Include="..\src\ripple\protocol\HashPrefix.h" />
+    <ClInclude Include="..\src\ripple\protocol\impl\secp256k1.h" />
+    <ClInclude Include="..\src\ripple\protocol\impl\STVar.h" />
+    <ClInclude Include="..\src\ripple\protocol\Indexes.h" />
+    <ClInclude Include="..\src\ripple\protocol\InnerObjectFormats.h" />
+    <ClInclude Include="..\src\ripple\protocol\IOUAmount.h" />
+    <ClInclude Include="..\src\ripple\protocol\Issue.h" />
+    <ClInclude Include="..\src\ripple\protocol\JsonFields.h" />
+    <ClInclude Include="..\src\ripple\protocol\Keylet.h" />
+    <ClInclude Include="..\src\ripple\protocol\KnownFormats.h" />
+    <ClInclude Include="..\src\ripple\protocol\LedgerFormats.h" />
+    <ClInclude Include="..\src\ripple\protocol\messages.h" />
+    <ClInclude Include="..\src\ripple\protocol\PayChan.h" />
+    <ClInclude Include="..\src\ripple\protocol\Protocol.h" />
+    <ClInclude Include="..\src\ripple\protocol\PublicKey.h" />
+    <ClInclude Include="..\src\ripple\protocol\Quality.h" />
+    <ClInclude Include="..\src\ripple\protocol\Rate.h" />
+    <ClInclude Include="..\src\ripple\protocol\RippleLedgerHash.h" />
+    <ClInclude Include="..\src\ripple\protocol\SecretKey.h" />
+    <ClInclude Include="..\src\ripple\protocol\Seed.h" />
+    <ClInclude Include="..\src\ripple\protocol\Serializer.h" />
+    <ClInclude Include="..\src\ripple\protocol\SField.h" />
+    <ClInclude Include="..\src\ripple\protocol\Sign.h" />
+    <ClInclude Include="..\src\ripple\protocol\SOTemplate.h" />
+    <ClInclude Include="..\src\ripple\protocol\st.h" />
+    <ClInclude Include="..\src\ripple\protocol\STAccount.h" />
+    <ClInclude Include="..\src\ripple\protocol\STAmount.h" />
+    <ClInclude Include="..\src\ripple\protocol\STArray.h" />
+    <ClInclude Include="..\src\ripple\protocol\STBase.h" />
+    <ClInclude Include="..\src\ripple\protocol\STBitString.h" />
+    <ClInclude Include="..\src\ripple\protocol\STBlob.h" />
+    <ClInclude Include="..\src\ripple\protocol\STExchange.h" />
+    <ClInclude Include="..\src\ripple\protocol\STInteger.h" />
+    <ClInclude Include="..\src\ripple\protocol\STLedgerEntry.h" />
+    <ClInclude Include="..\src\ripple\protocol\STObject.h" />
+    <ClInclude Include="..\src\ripple\protocol\STParsedJSON.h" />
+    <ClInclude Include="..\src\ripple\protocol\STPathSet.h" />
+    <ClInclude Include="..\src\ripple\protocol\STTx.h" />
+    <ClInclude Include="..\src\ripple\protocol\STValidation.h" />
+    <ClInclude Include="..\src\ripple\protocol\STVector256.h" />
+    <ClInclude Include="..\src\ripple\protocol\SystemParameters.h" />
+    <ClInclude Include="..\src\ripple\protocol\TER.h" />
+    <ClInclude Include="..\src\ripple\protocol\tokens.h" />
+    <ClInclude Include="..\src\ripple\protocol\TxFlags.h" />
+    <ClInclude Include="..\src\ripple\protocol\TxFormats.h" />
+    <ClInclude Include="..\src\ripple\protocol\UintTypes.h" />
+    <ClInclude Include="..\src\ripple\protocol\XRPAmount.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\ripple\nodestore\Benchmarks.md" />
+    <None Include="..\src\ripple\nodestore\README.md" />
+    <None Include="..\src\ripple\protocol\README.md" />
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

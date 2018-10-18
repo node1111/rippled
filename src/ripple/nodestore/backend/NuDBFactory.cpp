@@ -175,11 +175,12 @@ public:
         e.prepare (no);
         nudb::error_code ec;
         nudb::detail::buffer bf;
-        auto const result = nodeobject_compress(
-            e.getData(), e.getSize(), bf);
+        auto const result = nodeobject_compress(e.getData(), e.getSize(), bf);
+
         db_.insert (e.getKey(), result.first, result.second, ec);
         if(ec && ec != nudb::error::key_exists)
             Throw<nudb::system_error>(ec);
+
     }
 
     void
@@ -187,9 +188,10 @@ public:
     {
         BatchWriteReport report;
         report.writeCount = 1;
-        auto const start =
-            std::chrono::steady_clock::now();
+        auto const start = std::chrono::steady_clock::now();
+
         do_insert (no);
+
         report.elapsed = std::chrono::duration_cast <
             std::chrono::milliseconds>(
                 std::chrono::steady_clock::now() - start);
